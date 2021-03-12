@@ -29,20 +29,15 @@ Next, I tried using a pretrained ResNet18 model with Adam optimizer, which gave 
 
 At this point, I found this helpful [article](https://towardsdatascience.com/why-adamw-matters-736223f31b5d) that showed me the choice of optimizer was important too. Basically, I learned that Adam is a popular optimizer because it converges faster than SGD, but it can be prone to overfitting and weight decay isn’t effective when using it. As the bird training dataset has so many species, I realized that there aren’t that many images per species. I tried out AdamW, which aims to fix the overfitting issue, as well as SGD.
 
-![image](https://user-images.githubusercontent.com/31548288/110995384-25741c00-832f-11eb-90eb-e701cf9f3145.png)
-![image](https://user-images.githubusercontent.com/31548288/110995405-2ad16680-832f-11eb-9132-fe80f04bfb08.png)
+![image](https://user-images.githubusercontent.com/31548288/110995384-25741c00-832f-11eb-90eb-e701cf9f3145.png) ![image](https://user-images.githubusercontent.com/31548288/110995405-2ad16680-832f-11eb-9132-fe80f04bfb08.png)
 
 I didn’t notice a big difference between AdamW and Adam, but it was cool to see the characteristics described in the article in practice. You can see that the model using SGD has less overfitting, but would also require many more epochs of training to achieve the same level of accuracy as Adam.
 
 Using SGD with momentum ended up being the best option. At this point, I tried increasing image input size from 128x128 to 256x256, using ResNet34 (which has more layers), and using a learning schedule. All of these helped my model get to its highest testing accuracy.
 
 # Results
-![image](https://user-images.githubusercontent.com/31548288/110995537-5bb19b80-832f-11eb-9058-171303b6e878.png)
-
-Training Accuracy of the model: 99.439%  
-Validation Accuracy of the model: 79.839%
-
-After I had found the best parameters and other options that produced the best results, I retrained the model using the full training dataset (instead of splitting it into training and validation data). Then, I submitted the model predictions to Kaggle, getting a final testing accuracy of around 81%.
+![image](https://user-images.githubusercontent.com/31548288/111003124-68d48780-833b-11eb-8909-f1ea90519082.png)  
+After I finding the best parameters and other options that produced the best results, I retrained the model using the full training dataset (instead of splitting it into training and validation data). Then, I submitted the model predictions to Kaggle, getting a final testing accuracy of around 81%.
 
 # Conclusion
 While I initially struggled a lot because I’m used to more structured assignments and was unfamiliar with all of the tools I needed to use, I’m satisfied with the result of this project. I feel like I both completed the assignment and achieved my personal goals. Throughout this project, I read through a lot of documentation, articles, and academic papers. It was cool to be able to read about certain concepts and to be able to immediately apply them in my code.
