@@ -1,6 +1,6 @@
 # bird-classification
 CSE 455 final project: image classification using a neural network. This is a short documentation of my process.  
-A video with a short demo and some more explanations can be found [here](https://www.youtube.com/watch?v=0YdsuQivxTU).
+A video with a short demo and some more explanations can be found [here](https://www.youtube.com/watch?v=0W0_6xCHJKM).
 
 # Objective
 Given an image of a bird, classify its species out of the 555 possible options. The dataset consisted of around 38000 training and 10000 testing images, all of birds. This project is my work for this [Kaggle competition](https://www.kaggle.com/c/birds21wi/).
