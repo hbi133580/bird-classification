@@ -1,5 +1,5 @@
 # bird-classification
-CSE 455 final project: image classification using a neural network. This is a short documentation of my process.  
+Image classification using a neural network. This is a short documentation of my process.  
 A video with a short demo and some more explanations can be found [here](https://www.youtube.com/watch?v=0YdsuQivxTU).
 
 # Objective
